@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Ape.css">
+    <link rel="icon" href="./Assets/img/Ape-1.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom rotation classes */
+        .rotate-45 {
+            transform: rotate(45deg);
+        }
+
+        .rotate-neg-45 {
+            transform: rotate(-45deg);
+        }
+
+        .translate-y-1 {
+            transform: translateY(0.15rem);
+            /* Adjust vertical positioning */
+        }
+
+        .translate-y-neg-1 {
+            transform: translateY(-0.15rem);
+            /* Adjust vertical positioning */
+        }
+
+        @keyframes scroll {
+            0% {
+                transform: translateX(100%);
+                /* Start off-screen to the right */
+            }
+
+            100% {
+                transform: translateX(-100%);
+                /* End off-screen to the left */
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 10s linear infinite;
+            /* Adjust duration as needed */
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            /* Hide overflow */
+            white-space: nowrap;
+            /* Prevent text wrapping */
+            width: 100%;
+            /* Full width of the parent container */
+            box-sizing: border-box;
+            /* Include padding and border in width */
+        }
+
+        /* Custom text shadow for white color */
+        .text-shadow {
+            text-shadow:
+                2px 2px 0 rgba(0, 0, 0, 0.7),
+                /* Black shadow */
+                4px 4px 0 rgba(255, 255, 255, 0.7);
+            /* White shadow */
+        }
+    </style>
+</head>
+
+<body class="bg-black h-screen  items-center justify-center relative">
+    <div class="bg-yellow-300 absolute top-5 right-5 z-10">
+        <button id="hamburger" class=" flex-col items-center justify-center w-10 h-10 focus:outline-none">
+            <span id="bar1" class="block w-8 h-1 bg-gray-800 mb-1 transition-all duration-300"></span>
+            <span id="bar2" class="block w-8 h-1 bg-gray-800 mb-1 transition-all duration-300"></span>
+            <span id="bar3" class="block w-8 h-1 bg-gray-800 transition-all duration-300"></span>
+        </button>
+    </div>
+    <nav id="nav"
+        class="max-w-md mx-auto nav absolute top-3 left-3 right-5 bottom-3 flex items-center justify-center bg-white shadow-lg rounded-lg z-9 hidden">
+        <ul class="space-y-4">
+            <li><a href="#about" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">About</a></li>
+            <li><a href="#exchanges" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">Exchanges</a></li>
+            <li><a href="#tokenomics" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">Tokenomics</a></li>
+            <li><a href="#how-to-buy" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">How to Buy</a></li>
+            <li><a href="#community" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">Community</a></li>
+            <li><a href="#buy-now" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">Buy Now</a></li>
+        </ul>
+    </nav>
+
+    <!----head---->
+    <section>
+        <div class="flex flex-col md:flex-row items-center justify-center mt-20 space-x-4">
+            <!-- Left Image -->
+            <div class="flex-1">
+                <img src="./Assets/img/Ape-1.png" alt="Left Image" class="rounded-lg shadow-lg">
+            </div>
+            <div class="flex-1 text-center">
+                <img src="./Assets/img/LOGO-1024x622.png" alt="Right Image" class="rounded-lg shadow-lg mb-4">
+
+                <div class="space-y-2">
+                    <div class="space-y-2">
+                        <a href="#" class="relative inline-block">
+                            <img src="./Assets/img/buy-now.png" alt="Buy Now"
+                                class="rounded-xl border-2 border-black shadow-lg">
+                        </a>
+                        <a href="#" class="relative inline-block">
+                            <img src="./Assets/img/chart.png" alt="Chart"
+                                class="rounded-xl border-2 border-black shadow-lg">
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Icons directly below the right image -->
+                <div class="mt-4 flex justify-center space-x-4">
+                    <img src="./Assets/img/Telegram.png" alt="Telegram Icon" class="w-14 h-14">
+                    <img src="./Assets/img/X.png" alt="X Icon" class="w-14 h-14">
+                    <img src="./Assets/img/Dextools-Icon.png" alt="Dextools Icon" class="w-14 h-14">
+                    <img src="./Assets/img/Dexscreener-Icon.png" alt="Dexscreener Icon" class="w-14 h-14">
+
+
+                </div>
+            </div>
+            <!---------
+            <!----marquee moved here
+            <div class="flex items-center justify-center mt-10">
+                <div class="marquee-container bg-white p-4 shadow-lg rounded-lg">
+                    <div class="inline-block animate-scroll font-bold">
+                        THE DEV IS APE. &nbsp; &nbsp; &nbsp; THE DEV IS APE. &nbsp; &nbsp; &nbsp;
+                    </div>
+                </div>
+
+            </div>
+            --!>
+        </div>
+    </section>
+
+
+    <!-- About Us Section -->
+            <section class="max-w-9xl items-center justify-center mx-7 mt-10 p-6 bg-black rounded-lg shadow-lg">
+                <div class="flex flex-col md:flex-row items-center">
+                    <!-- Text Section -->
+                    <div class="flex-1 mb-6 md:mb-0 md:mr-10"> <!-- Text section takes equal space -->
+                        <h2 class="font-bold mb-4 text-[#FCCC04] font-londrina-solid text-shadow"
+                            style="font-size: 68px;">
+                            About Us
+                            <span
+                                class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                        </h2>
+                        <p class="text-white text-xl font-bold mb-4">
+                            Welcome to $Apedev, the only meme coin where our dev is quite literally an ape. No,
+                            really—we handed the
+                            keys to our resident primate and told him to go bananas on Solana. Don’t expect fancy tech
+                            lingo or a
+                            roadmap; our roadmap is whatever banana peel our dev slips on next.
+                        </p>
+                        <p class="text-white text-xl font-bold mb-4">
+                            Apedev isn’t just a project; it’s an adventure. We’re here to remind the world that crypto
+                            should be
+                            fun, unpredictable, and maybe a bit wild. With our ape dev at the helm, expect swinging
+                            volatility, meme
+                            magic, and all the vibes that make Web3 what it is. We’re 100% community-driven (partially
+                            because the
+                            dev can’t type more than three words at a time).
+                        </p>
+                        <p class="text-white text-xl font-bold">
+                            Join us, grab some bananas, and let’s see where this jungle leads!
+                        </p>
+                    </div>
+
+                    <!-- Image Section -->
+                    <div class="flex-1 mt-1 md:mt-0 ml-5"> <!-- Added margin-left to move image to the right -->
+                        <img src="./Assets/img/THE-DEV-unscreen.gif" alt="About Us"
+                            class="rounded-lg shadow-lg w-full h-auto md:w-3/4 md:h-auto">
+                        <!-- Ensures the image is responsive -->
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="font-bold justify-center items-center flex mb-4 text-[#FCCC04] font-londrina-solid text-shadow"
+                    style="font-size: 68px;">
+                    Loved By Millions
+                    <span class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                </h2>
+                <div class="relative w-full overflow-hidden">
+                    <div class="carousel flex" id="carousel">
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/wow-monkey.gif" alt="GIF 1" class="w-full rounded-lg shadow-md">
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/monkey-mad.gif" alt="GIF 2" class="w-full rounded-lg shadow-md">
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/monkey-happy.gif" alt="GIF 3" class="w-full rounded-lg shadow-md">
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/boring-monkey.gif" alt="GIF 4" class="w-full rounded-lg shadow-md">
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/3e9c3487a72de9dd8d68e6142ec52f0c.gif" alt="GIF 5"
+                                class="w-full rounded-lg shadow-md">
+                        </div>
+                        <div class="carousel-item flex-shrink-0 w-1/3 p-2">
+                            <img src="./Assets/img/8d5c1366-profile_ezgif.com-gif-maker_14.gif" alt="GIF 6"
+                                class="w-full rounded-lg shadow-md">
+                        </div>
+                    </div>
+                    <button
+                        class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2"
+                        onclick="moveSlide(-1)">&#10094;</button>
+                    <button
+                        class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-white rounded-full shadow-md p-2"
+                        onclick="moveSlide(1)">&#10095;</button>
+                </div>
+            </section>
+            <script src="./Ape.js">
+
+            </script>
+</body>
+
+</html>
