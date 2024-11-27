@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Ape.css">
     <link rel="icon" href="./Assets/img/Ape-1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -64,6 +65,10 @@
                 4px 4px 0 rgba(255, 255, 255, 0.7);
             /* White shadow */
         }
+
+        .border-multi {
+            border-image: linear-gradient(to right, black, yellow) 1;
+        }
     </style>
 </head>
 
@@ -76,7 +81,7 @@
         </button>
     </div>
     <nav id="nav"
-        class="max-w-md mx-auto nav absolute top-3 left-3 right-5 bottom-3 flex items-center justify-center bg-white shadow-lg rounded-lg z-9 hidden">
+        class="max-w-md mx-auto nav absolute top-3 left-3 right-5 bottom-3  items-center justify-center bg-white shadow-lg rounded-lg z-9 hidden">
         <ul class="space-y-4">
             <li><a href="#about" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">About</a></li>
             <li><a href="#exchanges" class="block text-gray-800 hover:bg-gray-200 p-2 rounded">Exchanges</a></li>
@@ -133,9 +138,7 @@
             --!>
         </div>
     </section>
-
-
-    <!-- About Us Section -->
+  <!-----head---->
             <section class="max-w-9xl items-center justify-center mx-7 mt-10 p-6 bg-black rounded-lg shadow-lg">
                 <div class="flex flex-col md:flex-row items-center">
                     <!-- Text Section -->
@@ -176,7 +179,7 @@
                 </div>
             </section>
             <section>
-                <h2 class="font-bold justify-center items-center flex mb-4 text-[#FCCC04] font-londrina-solid text-shadow"
+                <h2 class="font-bold justify-center items-center mt-40 mb-40 flex text-[#FCCC04] font-londrina-solid text-shadow"
                     style="font-size: 68px;">
                     Loved By Millions
                     <span class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
@@ -212,6 +215,186 @@
                         onclick="moveSlide(1)">&#10095;</button>
                 </div>
             </section>
+            <!------Exchange Section-------->
+            <section>
+                <div class="mt-40 mb-40">
+                    <h2 class="font-bold justify-center items-center flex text-[#FCCC04] font-londrina-solid text-shadow"
+                        style="font-size: 68px;">
+                        Exchanges
+                        <span
+                            class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                    </h2>
+                </div>
+                <div class="flex flex-col items-center mt-14">
+                    <div class="flex justify-center space-x-4 mb-4">
+                        <img src="./Assets/img/Jupiter.png" alt="Exchange Image 1" class="w-1/5">
+                        <img src="./Assets/img/dextools.png" alt="Exchange Image 2" class="w-1/5">
+                        <img src="./Assets/img/Dexscreener.png" alt="Exchange Image 3" class="w-1/5">
+                    </div>
+                    <div class="flex justify-center space-x-4">
+                        <img src="./Assets/img/Raydium.png" alt="Exchange Image 4" class="w-1/5">
+                        <img src="./Assets/img/TBA.png" alt="Exchange Image 5" class="w-1/5">
+                        <img src="./Assets/img/TBA.png" alt="Exchange Image 6" class="w-1/5">
+                    </div>
+                </div>
+            </section>
+            <section
+                class="max-w-9xl items-center justify-center mx-7 mt-48 p-6 bg-black rounded-lg shadow-lg flex flex-col md:flex-row">
+                <!-- Image Section -->
+                <div class="flex-1 mt-1 md:mt-0 ml-5">
+                    <img src="./Assets/img/Tokenoics-984x1024.png" alt="About Us"
+                        class="rounded-lg shadow-lg w-full h-auto md:w-3/4 md:h-auto">
+                </div>
+
+                <!-- Button Section -->
+                <div class="flex flex-col md:ml-10 mt-6 md:mt-0">
+                    <h2 class="font-bold mb-4 text-[#FCCC04] font-londrina-solid text-shadow" style="font-size: 68px;">
+                        Tokenomics
+                        <span
+                            class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                    </h2>
+                    <div class="space-y-2">
+                        <a href="#" class="relative inline-block">
+                            <button
+                                class="rounded-xl border-2 border-white shadow-lg bg-[#FCCC04] w-96 h-24 mb-5 relative overflow-hidden">
+                                <span class="absolute inset-0 border-2 border-black rounded-xl"></span>
+                                <!-- Black border -->
+                                <h2 class="text-center relative text-3xl font-londrina-solid font-bold z-10">SUPPLY</h2>
+                                <h2 class="text-center relative text-3xl font-bold font-londrina-solid z-10">
+                                    1,000,000,000</h2>
+                                <span
+                                    class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                            </button>
+                        </a>
+                    </div>
+                    <div class="space-y-2">
+                        <a href="#" class="relative inline-block">
+                            <button
+                                class="rounded-xl border-2 border-white shadow-lg bg-[#FCCC04] w-96 h-24 relative overflow-hidden">
+                                <span class="absolute inset-0 border-2 border-black rounded-xl"></span>
+                                <!-- Black border -->
+                                <h2 class="text-center relative text-3xl font-londrina-solid font-bold z-10">CONTACT
+                                    ADDRESS</h2>
+                                <h2 id="copy-text"
+                                    class="text-center relative text-sm font-londrina-solid font-bold z-10">
+                                    Grr7tBAAUH4dA7vxA7Dnv8QvSXVwnJF518ji7QSVJqWu</h2>
+                                <span
+                                    class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                            </button>
+                        </a>
+                        <div class="flex justify-center mt-2">
+                            <img src="./Assets/img/ICON-COPY.png" alt="Copy Icon" class="items-center cursor-pointer"
+                                onclick="copyText()">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <div class="mt-40 mb-40">
+                    <h2 class="font-bold justify-center items-center flex text-[#FCCC04] font-londrina-solid text-shadow"
+                        style="font-size: 68px;">
+                        How to buy
+                        <span
+                            class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                    </h2>
+                </div>
+            </section>
+            <section
+                class="max-w-9xl mx-7 mt-48 p-6 bg-black border-8 border-black shadow-lg flex flex-col md:flex-row items-center"
+                style="height: 600px;">
+
+                <!-- Image Section -->
+                <div class="flex-1 mt-1 md:mt-0 ml-5">
+                    <img src="./Assets/img/THE-DEV-4.gif" alt="About Us"
+                        class="rounded-lg shadow-lg w-full h-auto md:w-3/4 md:h-auto">
+                </div>
+
+                <!-- Carousel Section -->
+                <div class="flex-1 mt-5 md:mt-0 relative">
+                    <div class="relative h-full flex flex-col justify-center items-center">
+                        <!-- Carousel Items -->
+                        <div id="carousel" class="space-y-4">
+                            <!-- Carousel Item 1 -->
+                            <div class="relative flex flex-col items-center">
+                                <!-- Outer yellow border -->
+                                <div class="border-8 border-yellow-500 rounded-lg p-2">
+                                    <!-- Inner black border -->
+                                    <div
+                                        class="border-4 relative border-black bg-white rounded-lg p-10 flex flex-col items-center">
+                                        <!-- Outer circle with black and white border -->
+                                        <div
+                                            class="absolute top-4 left-4 w-36 h-36  z-10 border-8 border-white rounded-full flex items-center justify-center">
+                                            <div
+                                                class="w-full h-full border-8 border-black rounded-full flex items-center justify-center bg-yellow-500 text-black font-bold">
+                                                1
+                                            </div>
+                                        </div>
+                                        <div class="absolute w-56 h-56  z-20 text-black">
+                                            <p>
+                                                Visit phantom.app and follow the simple steps to create a new account
+                                                with the Phantom app or browser extension.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Carousel Controls -->
+                <button id="prev"
+                    class="absolute left-[-50px] top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full bg-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button id="next"
+                    class="absolute right-[-50px] top-1/2 transform -translate-y-1/2 text-white p-2 rounded-full bg-black">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+            </section>
+            <section>
+                <div class="items-center justify-center flex">
+                    <img src="./Assets/img/2-1.gif" alt="">
+
+                </div>
+                <div class="mt-1 mb-1">
+                    <h2 class="font-bold justify-center items-center flex text-[#FCCC04] font-londrina-solid text-shadow"
+                        style="font-size: 68px;">
+                        Socials
+                        <span
+                            class="absolute inset-0 text-white opacity-50 transform translate-x-1 translate-y-1"></span>
+                    </h2>
+                </div>
+                <ul class="flex justify-center items-center space-x-2">
+                    <li class="flex justify-center">
+                        <img class="mx-auto w-28" style="transform: rotate(10deg);"
+                            src="./Assets/img/Dexscreener-Icon.png" alt="Icon">
+                    </li>
+                    <li class="flex justify-center">
+                        <img class="mx-auto w-28" style="transform: rotate(-10deg);"
+                            src="./Assets/img/Dextools-Icon.png" alt="Icon">
+                    </li>
+                    <li class="flex justify-center">
+                        <img class="mx-auto w-28" style="transform: rotate(10deg);" src="./Assets/img/X.png" alt="Icon">
+                    </li>
+                    <li class="flex justify-center">
+                        <img class="mx-auto w-28" style="transform: rotate(-10deg);" src="./Assets/img/Telegram.png"
+                            alt="Icon">
+                    </li>
+                </ul>
+            </section>
+            <footer>
+                <div class="justify-center flex items-center">
+                    <h3 class="text-1xl text-white font-bold">© 2024 APEDEV • All Rights Reserved</h3>
+                </div>
+            </footer>
+
             <script src="./Ape.js">
 
             </script>

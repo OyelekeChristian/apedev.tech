@@ -50,3 +50,59 @@ function moveSlide(direction) {
 setInterval(() => {
   moveSlide(1);
 }, 3000);
+
+//copy texts
+function copyText() {
+  // Get the text from the element with id 'copy-text'
+  const textToCopy = document.getElementById("copy-text").innerText;
+
+  // Use the Clipboard API to copy text
+  navigator.clipboard
+    .writeText(textToCopy)
+    .then(() => {
+      // Create a notification element
+      const notification = document.createElement("div");
+      notification.innerText = "Copied!";
+      notification.style.position = "fixed";
+      notification.style.bottom = "20px";
+      notification.style.right = "20px";
+      notification.style.padding = "10px";
+      notification.style.backgroundColor = "#FCCC04"; // Yellow background
+      notification.style.color = "black"; // Optional: Change text color to black for better contrast
+      notification.style.borderRadius = "5px";
+      notification.style.zIndex = "1000";
+
+      // Append the notification to the body
+      document.body.appendChild(notification);
+
+      // Remove the notification after 3 seconds
+      setTimeout(() => {
+        document.body.removeChild(notification);
+      }, 3000);
+    })
+    .catch((err) => {
+      console.error("Failed to copy: ", err);
+    });
+}
+// Basic carousel functionality (example)
+const carouselItems = document.querySelectorAll("#carousel > div");
+let currentIndex = 0;
+
+function showSlide(index) {
+  carouselItems.forEach((item, i) => {
+    item.style.display = i === index ? "block" : "none";
+  });
+}
+
+document.getElementById("prev").addEventListener("click", () => {
+  currentIndex = currentIndex > 0 ? currentIndex - 1 : carouselItems.length - 1;
+  showSlide(currentIndex);
+});
+
+document.getElementById("next").addEventListener("click", () => {
+  currentIndex = currentIndex < carouselItems.length - 1 ? currentIndex + 1 : 0;
+  showSlide(currentIndex);
+});
+
+// Initialize the first slide
+showSlide(currentIndex);
